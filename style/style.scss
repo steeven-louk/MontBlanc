@@ -1,11 +1,26 @@
+@font-face {
+    font-family: 'DrukCyr' ;
+    src: url('../fonts/DrukCyr-Bold.woff') format('woff'),
+         url('../fonts/DrukCyr-Bold.woff2')  format('woff2'),
+         url('../fonts/DrukCyr-Medium.woff2')  format('woff2'),
+         url('../fonts/DrukCyr-Medium.woff')  format('woff'),
+         url('../fonts/DrukCyr-Super.woff')  format('woff'),
+         url('../fonts/DrukCyr-Super.woff2')  format('woff2')
+}
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+
 
 body{
     display: flex;
     flex-direction: column;
     background: #060507;
     color: #fff;
-    font-family: 'Montserra', sans-serif;
+   // font-family: 'Montserra', sans-serif;
+    font-family: DrukCyr, sans-serif;
     box-sizing: border-box;
     overflow: hidden;
 
@@ -13,6 +28,7 @@ body{
     margin: 0;
     height: 100vh;
     width: 100vw;
+    transition: .4s all ease-in;
 }
 
 header{
@@ -30,16 +46,25 @@ header{
         .nav__brand{
             display: flex;
             padding-left: 35px;
+           // cursor: not-allowed;
 
             &__img{
                 width: 285px;
                 height: 45px;
+
+                @media screen and (max-width: 760px) {
+                    display: none;
+                }
             }
 
             &__icon{
                 width: 50px;
                 height: 50px;
                 display: none;
+
+                @media screen and (max-width: 760px) {
+                    display: block;
+                }
             }
         }
 
@@ -48,13 +73,13 @@ header{
             
            
             .nav-item{
-                position: relative;
+
                 list-style: none;
                 text-transform: uppercase;
                 padding-left: 4em;
                 cursor: pointer;
-                font-weight: bold;
-                top: 6px;
+                font-size: 20px;
+                letter-spacing: 2px;
 
                 &:hover{
                     color: #A75B12;
@@ -71,6 +96,10 @@ header{
        // float: right;
         position: absolute;
         right: 0;
+
+        @media screen and (max-width: 860px) {
+            display: none;
+        }
     
         
     }
@@ -118,7 +147,7 @@ header{
                 height: 110px;
                 right: 7em;
                 top: 4em;
-                animation: circle infinite 15s;
+                animation: circle infinite 13s;
 
                 @keyframes circle {
                     
@@ -176,9 +205,10 @@ header{
             }
 
             .text__container{
-                width: 486px;
-                font-size: 14px;
+                width: 440px;
+                font-size: 12px;
                 padding-left: 3em;
+                font-family: 'Montserrat', sans-serif;
                 
                
             }
@@ -224,6 +254,7 @@ header{
                             text-orientation: sideways;
                             transform: rotate(180deg);
                             line-height: 3.5;
+                            font-family: 'Montserrat', sans-serif;
                             color: #3f3e44;
                             text-transform: uppercase;
                             
@@ -237,13 +268,15 @@ header{
 
                             span {
                                 &:nth-child(1),&:nth-child(3){
-                                font-size: 12px;
+                                font-size: 9px;
+                                font-family: 'Montserrat', sans-serif;
                             }
 
                             &:nth-child(2){
                                 font-weight: bold;
-                                font-size: 30px;
+                                font-size: 32px;
                                 text-transform: uppercase;
+                                letter-spacing: 2px;
                             }
                         }
                         }
