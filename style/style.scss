@@ -29,6 +29,12 @@ body {
     height: 100vh;
     max-width: 100%;
     transition: .4s all ease-in;
+
+    @media screen and (max-width: 661px) {
+        overflow-y: visible;
+    }
+
+
 }
 
 
@@ -276,6 +282,11 @@ header {
                     font-size: 12px;
                     padding-left: 3em;
                     font-family: 'Montserrat', sans-serif;
+
+                    @media screen and (max-width: 484px) {
+                        font-size: 10px;
+                        padding-left: 10px;
+                    }
                 }
 
                 img {
@@ -335,10 +346,18 @@ header {
                         padding: 3px 3px 20px 3px;
 
 
-                        @media screen and (max-width: 780px) {
+                        @media screen and (max-width: 780px)  {
                             flex-direction: column;
                         }
 
+                        @media screen and (max-width: 661px) {
+                           flex-direction: row;
+                        }
+
+                      
+                        @media screen and (max-width: 484px) {
+                            flex-direction: column;
+                        }
 
                         .vertical {
 
@@ -355,12 +374,18 @@ header {
                                 text-align: center;
                             }
 
+                          
+
+                            
+
                             @media screen and (max-width: 484px) {
                                 writing-mode: horizontal-tb;
                                 text-orientation: sideways;
                                 transform: none;
                                 font-size: 20px;
                             }
+
+                            
                         }
 
                         .contain {
@@ -373,9 +398,11 @@ header {
                                 justify-content: space-evenly;
                             }
 
-                            @media screen and (max-width: 780px) {}
-
-
+                            @media screen and (max-width: 661px) {
+                                justify-self: center;
+                                align-items: center;
+                            }
+                            
                             span {
 
                                 &:nth-child(1),
@@ -385,6 +412,10 @@ header {
 
                                     @media screen and (max-width: 780px) {
                                         font-size: 15px;
+                                    }
+
+                                    @media screen and (max-width: 661px) {
+                                        font-size: 12px;
                                     }
 
                                 }
